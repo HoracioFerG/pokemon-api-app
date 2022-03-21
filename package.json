@@ -2,7 +2,7 @@
   "name": "pokemon-api-app",
   "version": "0.0.1",
   "description": "A practice Quasar app",
-  "productName": "Quasar App",
+  "productName": "Pokemon Api App",
   "author": "Rmpx <horaciofernandezgar@gmail.com>",
   "private": true,
   "scripts": {

@@ -1,11 +1,11 @@
 <template>
   <div class="q-pa-md" style="max-width: 350px">
     <q-list bordered>
-      <q-item v-for="pokemon in pokeArray" :key="pokemon.id" clickable v-ripple>
-        <q-item-section>Image avatar</q-item-section>
+      <q-item v-for="(pokemon,index ) in pokeArray" :key="pokemon.id" clickable v-ripple @click="$emit('optionSelected', pokemon, index)">
+        <q-item-section>{{pokemon.name}}</q-item-section>
         <q-item-section avatar>
           <q-avatar rounded>
-            <img :src="iconTypeSrc(pokemon)" />
+            <img :src="iconTypeSrc(pokemon.type)" />
           </q-avatar>
         </q-item-section>
       </q-item>
@@ -22,6 +22,7 @@ export default {
     },
   },
   methods: {
+
     iconTypeSrc(type) {
       return `https://raw.githubusercontent.com/itsjavi/pokemon-assets/main/assets/svg/types/${type}.svg`;
     },

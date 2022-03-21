@@ -12,9 +12,10 @@
 
 <script>
 export default {
+  name: 'PokemonPictureComponent',
   props: {
-    pokemonId: {
-      type: Number,
+    pokemon: {
+      type: Object,
       required: true,
     },
     showPokemon: {
@@ -23,9 +24,11 @@ export default {
       default: false,
     },
   },
+
   computed: {
     imgSource() {
-      return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.pokemonId}.svg`;
+      console.log(this.pokemon)
+      return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.pokemon.id}.svg`;
     },
   },
 };
