@@ -1,4 +1,4 @@
-# Quasar App (rick-morty-quasar)
+# Quasar App (pokemon-api-app)
 
 A practice Quasar app
 
